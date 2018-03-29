@@ -1,0 +1,17 @@
+﻿<style>
+    .animate-switch-container { position:relative; background:white; border:1px solid black; height:40px; overflow:hidden; }
+    .animate-switch { padding:10px; }
+    .animate-switch.ng-animate { transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s; position:absolute; top: 0px; bottom:0px; left:0px; right:0px; }
+    .animate-switch.ng-leave.ng-leave-active, .animate-switch.ng-enter { top:-50px; }
+    .animate-switch.ng-leave, .animate-switch.ng-enter.ng-enter-active { top:0px; }
+</style>
+<select ng-model="selection" ng-options="item for item in example7List">
+</select>
+<code>selection={{selection}}</code>
+<hr />
+<div class="animate-switch-container" ng-switch on="selection">
+    <div class="animate-switch" ng-switch-when="settings">Setting Div</div>
+    <div class="animate-switch" ng-switch-when="options">Option Div</div>
+    <div class="animate-switch" ng-switch-when="home">Home Span</div>
+    <div class="animate-switch" ng-switch-default>default</div>
+</div>

@@ -1,0 +1,21 @@
+﻿<style>
+    @keyframes myChangeHide {
+        from {
+            height: 100px;
+        }
+        to {
+            height:0px;
+        }
+    }
+    div#example2 {
+        height: 100px;
+        background-color:lightblue;
+    }
+    div#example2.ng-hide {
+        animation: 0.5s myChangeHide;
+    }
+</style>
+
+Hide the DIV: <input type="checkbox" ng-model="myCheck" />
+
+<div id="example2" ng-hide="myCheck"></div>

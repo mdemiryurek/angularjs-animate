@@ -1,0 +1,26 @@
+﻿<style>
+    li span {
+        float:right;
+        cursor:pointer;
+        margin-left:10px;
+    }
+</style>
+
+<div class="row">
+    <div class="one-half column offset-by-three">
+        <h1>List</h1>
+        <ul>
+            <li ng-repeat="item in example5List" class="dims">
+                {{item.name}}
+                <span ng-click="removeItem($index)">X</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="one-half column offset-by-three">
+        <input type="text" ng-model="newName" />
+        <button class="button-primary" ng-click="addItem()">Add</button>
+    </div>
+</div>

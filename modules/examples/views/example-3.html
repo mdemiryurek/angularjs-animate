@@ -1,0 +1,18 @@
+﻿<style>
+    .css-class-add, .css-class-remove {
+        transition: all 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    }
+    .css-class, .css-class-add.css-class-active {
+        color:red;
+        font-size:3em;
+    }
+    .css-class-remove.css-class-remove-active {
+        font-size:1em;
+        color:black;
+    }
+</style>
+
+<button ng-click="myCssVar='css-class'">Set</button>
+<button ng-click="myCssVar=''">Clear</button>
+<hr />
+<p ng-class="myCssVar">CSS-Animated Text</p>

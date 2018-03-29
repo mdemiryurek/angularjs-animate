@@ -1,0 +1,39 @@
+﻿<style>
+    li span {
+        float:right;
+        cursor:pointer;
+        margin-left:10px;
+    }
+    .dim {
+        transition: 1s linear all;
+        -webkit-transition: 1s linear all;
+    }
+    .dim.ng-enter {
+        opacity: 0;
+    }
+    .dim.ng-enter.ng-enter-active {
+        opacity: 1;
+    }
+
+    .dim.ng-leave { opacity:1;}
+    .dim.ng-leave.ng-leave-active { opacity:0; }
+</style>
+
+<div class="row">
+    <div class="one-half column offset-by-three">
+        <h1>List</h1>
+        <ul>
+            <li ng-repeat="item in example5List" class="dim">
+                {{item.name}}
+                <span ng-click="removeItem($index)">X</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="one-half column offset-by-three">
+        <input type="text" ng-model="newName" />
+        <button class="button-primary" ng-click="addItem()">Add</button>
+    </div>
+</div>
